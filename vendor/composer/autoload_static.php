@@ -6,6 +6,21 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitd68769204324a61d6d60c7d36f48e5f3
 {
+    public static $files = array (
+        'be01b9b16925dcb22165c40b46681ac6' => __DIR__ . '/..' . '/wp-cli/php-cli-tools/lib/cli/cli.php',
+        '4829b2fddb6a054e51fbedd69dcbc605' => __DIR__ . '/../..' . '/src/Cli.php',
+    );
+
+    public static $prefixesPsr0 = array (
+        'c' => 
+        array (
+            'cli' => 
+            array (
+                0 => __DIR__ . '/..' . '/wp-cli/php-cli-tools/lib',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -13,6 +28,7 @@ class ComposerStaticInitd68769204324a61d6d60c7d36f48e5f3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixesPsr0 = ComposerStaticInitd68769204324a61d6d60c7d36f48e5f3::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitd68769204324a61d6d60c7d36f48e5f3::$classMap;
 
         }, null, ClassLoader::class);

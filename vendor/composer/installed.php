@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'c43d1d02b071526df8e8eb859966363b6786f237',
+    'reference' => '9a15dc7d681492912e8571073cc60ee273635368',
     'name' => 'hexlet/code',
   ),
   'versions' => 
@@ -18,7 +18,16 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'c43d1d02b071526df8e8eb859966363b6786f237',
+      'reference' => '9a15dc7d681492912e8571073cc60ee273635368',
+    ),
+    'wp-cli/php-cli-tools' => 
+    array (
+      'pretty_version' => 'v0.11.11',
+      'version' => '0.11.11.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'fe9c7c44a9e1bf2196ec51dc38da0593dbf2993f',
     ),
   ),
 );
