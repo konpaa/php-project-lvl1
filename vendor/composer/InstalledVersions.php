@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '9a15dc7d681492912e8571073cc60ee273635368',
+    'reference' => '659cdb4220d0891764e5b1b3d1ed7191ef116f48',
     'name' => 'hexlet/code',
   ),
   'versions' => 
@@ -42,7 +42,16 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9a15dc7d681492912e8571073cc60ee273635368',
+      'reference' => '659cdb4220d0891764e5b1b3d1ed7191ef116f48',
+    ),
+    'squizlabs/php_codesniffer' => 
+    array (
+      'pretty_version' => '3.5.8',
+      'version' => '3.5.8.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9d583721a7157ee997f235f327de038e7ea6dac4',
     ),
     'wp-cli/php-cli-tools' => 
     array (
