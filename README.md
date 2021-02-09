@@ -5,4 +5,5 @@
 
 ![PHP Composer](https://github.com/konpaa/php-project-lvl1/workflows/PHP%20Composer/badge.svg)
 
-https://asciinema.org/a/239367
+
+[![asciicast](https://asciinema.org/a/239367.svg)](https://asciinema.org/a/239367)
