@@ -3,4 +3,4 @@
 
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
-![PHP Actions Status][https://github.com/konpaa/php-project-lvl1/workflows/php_2.yml/badge.svg](https://github.com/konpaa/php-project-lvl1/actions)
+![PHP Actions Status][https://github.com/konpaa/php-project-lvl1/workflows/php_2.yml/badge.svg]
