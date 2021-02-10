@@ -7,12 +7,22 @@
         "automattic/vipwpcs": "^2.2"
     },
    "bin": [
-    "bin/brain-games",
-    "bin/brain-even"
+        "bin/brain-games",
+        "bin/brain-even",
+        "bin/brain-calc",
+        "bin/brain-gcd",
+        "bin/brain-progression",
+        "bin/brain-prime"
   ],
      "autoload": {
         "files": [
-            "src/Cli.php"
+            "src/general.php",
+            "src/games/even.php",
+            "src/games/calc.php",
+            "src/games/gcd.php",
+            "src/games/progression.php",
+            "src/games/prime.php"
+
         ]
 },
     "require-dev": {

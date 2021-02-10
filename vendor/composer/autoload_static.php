@@ -9,6 +9,7 @@ class ComposerStaticInitd68769204324a61d6d60c7d36f48e5f3
     public static $files = array (
         'be01b9b16925dcb22165c40b46681ac6' => __DIR__ . '/..' . '/wp-cli/php-cli-tools/lib/cli/cli.php',
         '4829b2fddb6a054e51fbedd69dcbc605' => __DIR__ . '/../..' . '/src/Cli.php',
+        'b48d99a0c4ca6845f1010253e068774d' => __DIR__ . '/../..' . '/src/Calc.php',
     );
 
     public static $prefixLengthsPsr4 = array (
