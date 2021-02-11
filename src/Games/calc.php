@@ -11,15 +11,12 @@ function calculate(int $operand1, int $operand2, string $operator): int
     switch ($operator) {
         case '+':
             return $operand1 + $operand2;
-            break;
 
         case '-':
             return $operand1 - $operand2;
-            break;
 
         case '*':
             return $operand1 * $operand2;
-            break;
     }
 }
 
