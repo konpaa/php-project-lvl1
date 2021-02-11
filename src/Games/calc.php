@@ -6,7 +6,7 @@ use function Php\Project\Lvl1\general\run;
 
 const TASK = "What is the result of the expression?";
 
-function calculate($operand1, $operand2, $operator)
+function calculate(int $operand1, int $operand2, string $operator) : int
 {
     switch ($operator) {
         case '+':

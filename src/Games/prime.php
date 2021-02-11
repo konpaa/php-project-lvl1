@@ -6,7 +6,7 @@ use function Php\Project\Lvl1\general\run;
 
 const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function isPrime($number)
+function isPrime(int $number) : bool
 {
     // false for negatives, 0 and 1
     if ($number < 2) {

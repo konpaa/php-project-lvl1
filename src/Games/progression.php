@@ -8,7 +8,7 @@ const TASK = 'What number is missing in the progression?';
 
 const PROGRESSION_LENGTH = 10;
 
-function progression($init, $step)
+function progression(int $init, int $step) : array
 {
     $progression = [];
     for ($i = 0; $i < PROGRESSION_LENGTH; $i++) {
