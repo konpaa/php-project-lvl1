@@ -1,9 +1,11 @@
 <?php
 
 namespace Php\Project\Lvl1\Games\progression;
+
 use function Php\Project\Lvl1\general\run;
 
 const TASK = 'What number is missing in the progression?';
+
 const PROGRESSION_LENGTH = 10;
 
 function progression($init, $step)

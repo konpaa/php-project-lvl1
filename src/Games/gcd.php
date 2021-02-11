@@ -1,6 +1,7 @@
 <?php
 
 namespace Php\Project\Lvl1\Games\gcd;
+
 use function Php\Project\Lvl1\general\run;
 
 const GAME_RULE_GCD = "Find the greatest common divisor of given numbers.";

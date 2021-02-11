@@ -1,6 +1,7 @@
 <?php
 
 namespace Php\Project\Lvl1\Games\even;
+
 use function Php\Project\Lvl1\general\run;
 
 const TASK = 'Answer "yes" if number even otherwise answer "no".';

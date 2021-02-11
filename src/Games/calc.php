@@ -1,6 +1,7 @@
 <?php
 
 namespace Php\Project\Lvl1\Games\calc;
+
 use function Php\Project\Lvl1\general\run;
 
 const TASK = "What is the result of the expression?";
