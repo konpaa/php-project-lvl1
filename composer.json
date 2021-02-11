@@ -7,12 +7,11 @@
         "automattic/vipwpcs": "^2.2"
     },
    "bin": [
-        "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
         "bin/brain-progression",
-        "bin/brain-prime"
+        "bin/brain-prime",
   ],
      "autoload": {
         "files": [
