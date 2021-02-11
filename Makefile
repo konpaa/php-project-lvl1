@@ -7,6 +7,9 @@ validate:
 lint:
 	composer run-script phpcs -- --standard=PSR12 src bin
 
+brain-games:
+	./bin/brain-games
+
 brain-progression:
 	./bin/brain-progression
 

@@ -8,6 +8,7 @@ class ComposerStaticInitd68769204324a61d6d60c7d36f48e5f3
 {
     public static $files = array (
         'be01b9b16925dcb22165c40b46681ac6' => __DIR__ . '/..' . '/wp-cli/php-cli-tools/lib/cli/cli.php',
+        '717fb2ff4e624851da1876629d312e47' => __DIR__ . '/../..' . '/src/Games/cli.php',
         '1ff3516e78d80dde6bc1df7b007899cf' => __DIR__ . '/../..' . '/src/general.php',
         '3c79fa35e876685cd91eee40e6ae497a' => __DIR__ . '/../..' . '/src/Games/even.php',
         '0e3e4ebe0bac134b7e3514ed61b79220' => __DIR__ . '/../..' . '/src/Games/calc.php',
