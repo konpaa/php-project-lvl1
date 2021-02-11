@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\games\progression;
+namespace Php\Project\Lvl1\Games\progression;
 
-use function BrainGames\general\runEngine;
+use function Php\Project\Lvl1\general\runEngine;
 
 const GAME_RULE_PROGRESSION = "What number is missing in the progression?";
 const COUNT_PROGRESSION = 10;

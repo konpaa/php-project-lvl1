@@ -1,24 +1,31 @@
 <?php
 
-namespace BrainGames\games\even;
+namespace Php\Project\Lvl1\general;
 
-use function BrainGames\general\runEngine;
+use function cli\line;
+use function cli\prompt;
 
-const GAME_RULE_EVEN = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+const ROUNDS_COUNT = 3;
 
-function isEven($number)
+function runEngine($generateGameData, $gameRule)
 {
-    return $number % 2 == 0;
+    line("Welcome to the Brain Games!");
+    line($gameRule);
+    $userName = prompt('May I have your name', $default = false, "? ");
+    line("Hello, %s!", $userName);
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        ['question' => $question, 'correctAnswer' => $correctAnswer] = $generateGameData();
+        line("Question: {$question}");
+        $userAnswer = prompt("Your answer");
+        if ($userAnswer == $correctAnswer) {
+             line("Correct!");
+        } else {
+            line("{$userAnswer} is wrong answer ;(.");
+            line("Correct answer was {$correctAnswer}. Let's try again, {$userName}!");
+            die();
+        }
+    }
+    line("Congratulations, %s!", $userName);
 }
 
-function runEvenGame()
-{
-    $generateGameData = function () {
-        $gameData = [];
-        $question = rand(1, 100);
-        $gameData['question'] = $question;
-        $gameData['correctAnswer'] = isEven($question) ? 'yes' : 'no';
-        return $gameData;
-    };
-    runEngine($generateGameData, GAME_RULE_EVEN);
-}
+

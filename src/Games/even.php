@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\games\even;
+namespace Php\Project\Lvl1\Games\even;
 
-use function BrainGames\general\runEngine;
+use function Php\Project\Lvl1\general\runEngine;
 
 const GAME_RULE_EVEN = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 

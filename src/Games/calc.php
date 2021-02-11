@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\games\calc;
+namespace Php\Project\Lvl1\Games\calc;
 
-use function BrainGames\general\runEngine;
+use function Php\Project\Lvl1\general\runEngine;
 
 const GAME_RULE_CALCULATOR = "What is the result of the expression?";
 const MATH_SIGNS = ['+', '-', '*'];
