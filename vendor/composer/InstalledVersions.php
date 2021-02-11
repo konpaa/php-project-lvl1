@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '57b70d4d0bc31f9d086ffe7c2ecf586628ef7cff',
+    'reference' => 'd754aa8bc2d925f11b7bb7302d9c49672b8157e3',
     'name' => 'hexlet/code',
   ),
   'versions' => 
@@ -51,7 +51,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '57b70d4d0bc31f9d086ffe7c2ecf586628ef7cff',
+      'reference' => 'd754aa8bc2d925f11b7bb7302d9c49672b8157e3',
     ),
     'sirbrillig/phpcs-variable-analysis' => 
     array (

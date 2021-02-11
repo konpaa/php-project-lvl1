@@ -8,12 +8,13 @@ class ComposerStaticInitd68769204324a61d6d60c7d36f48e5f3
 {
     public static $files = array (
         'be01b9b16925dcb22165c40b46681ac6' => __DIR__ . '/..' . '/wp-cli/php-cli-tools/lib/cli/cli.php',
-        'dc63164f3384c20aa59219ba509350ad' => __DIR__ . '/../..' . '/src/General.php',
+        '1ff3516e78d80dde6bc1df7b007899cf' => __DIR__ . '/../..' . '/src/general.php',
         '3c79fa35e876685cd91eee40e6ae497a' => __DIR__ . '/../..' . '/src/Games/even.php',
         '0e3e4ebe0bac134b7e3514ed61b79220' => __DIR__ . '/../..' . '/src/Games/calc.php',
         '14251c0c2f1445a6ba4ba738e8256ba4' => __DIR__ . '/../..' . '/src/Games/gcd.php',
         'ef6088ad362e584cbccc0b7a6d763561' => __DIR__ . '/../..' . '/src/Games/progression.php',
         '8070774bb7d5c6ba47f55dd21ff8f47c' => __DIR__ . '/../..' . '/src/Games/prime.php',
+        'a20e374db2fa6e5d8e5ba71bd236443f' => __DIR__ . '/../..' . '/src/Games/Cli.php',
     );
 
     public static $prefixLengthsPsr4 = array (
