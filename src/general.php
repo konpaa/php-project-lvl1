@@ -7,7 +7,7 @@ use function cli\prompt;
 
 const ROUNDS_COUNT = 3;
 
-function run(string $task, $getResult)
+function run(string $task, callable $getResult): void
 {
     line("Welcome to the Brain Game");
     line($task);

@@ -20,7 +20,7 @@ function isPrime(int $number): bool
     return true;
 }
 
-function play()
+function play(): void
 {
     $getResult = function () {
         $num = rand(1, 100);

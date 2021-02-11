@@ -18,7 +18,7 @@ function gcd(int $a, int $b): int
     return $a;
 }
 
-function play()
+function play(): void
 {
     $getResult = function () {
         $a = rand(1, 100);

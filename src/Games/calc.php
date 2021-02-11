@@ -23,7 +23,7 @@ function calculate(int $operand1, int $operand2, string $operator): int
     }
 }
 
-function play()
+function play(): void
 {
     $getResult = function () {
         $operand1 = rand(1, 100);

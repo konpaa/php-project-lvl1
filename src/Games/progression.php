@@ -20,7 +20,7 @@ function progression(int $init, int $step): array
     return $progression;
 }
 
-function play()
+function play(): void
 {
     $getResult = function () {
         $init = rand(1, 10);
