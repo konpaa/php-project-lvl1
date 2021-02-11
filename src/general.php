@@ -27,5 +27,3 @@ function runEngine($generateGameData, $gameRule)
     }
     line("Congratulations, %s!", $userName);
 }
-
-
