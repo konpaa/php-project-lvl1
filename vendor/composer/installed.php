@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'd754aa8bc2d925f11b7bb7302d9c49672b8157e3',
+    'reference' => 'cb83715001ca48075aef0d1c40885c8a410fe5c0',
     'name' => 'hexlet/code',
   ),
   'versions' => 
@@ -27,7 +27,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'd754aa8bc2d925f11b7bb7302d9c49672b8157e3',
+      'reference' => 'cb83715001ca48075aef0d1c40885c8a410fe5c0',
     ),
     'sirbrillig/phpcs-variable-analysis' => 
     array (
