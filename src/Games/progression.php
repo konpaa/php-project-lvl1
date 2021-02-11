@@ -22,7 +22,7 @@ function progression(int $init, int $step): array
 
 function play(): void
 {
-    $getResult = function () {
+    $getResult = function (): array {
         $init = rand(1, 10);
         $step = rand(1, 10);
         $result = progression($init, $step);

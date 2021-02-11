@@ -20,7 +20,7 @@ function gcd(int $a, int $b): int
 
 function play(): void
 {
-    $getResult = function () {
+    $getResult = function (): array {
         $a = rand(1, 100);
         $b = rand(1, 100);
         $result = gcd($a, $b);

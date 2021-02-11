@@ -13,7 +13,7 @@ function isEven(int $number): bool
 
 function play(): void
 {
-    $getResult = function () {
+    $getResult = function (): array {
         $question = rand(1, 100);
         $rightAnswer = isEven($question) ? 'yes' : 'no';
         return [$question, $rightAnswer];

@@ -22,7 +22,7 @@ function isPrime(int $number): bool
 
 function play(): void
 {
-    $getResult = function () {
+    $getResult = function (): array {
         $num = rand(1, 100);
         $result = isPrime($num) ? "yes" : "no";
         $question = $num;

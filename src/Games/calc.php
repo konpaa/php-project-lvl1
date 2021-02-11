@@ -25,7 +25,7 @@ function calculate(int $operand1, int $operand2, string $operator): int
 
 function play(): void
 {
-    $getResult = function () {
+    $getResult = function (): array {
         $operand1 = rand(1, 100);
         $operand2 = rand(1, 100);
         $operators = ['+', '-', '*'];
