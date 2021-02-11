@@ -7,23 +7,25 @@ use function cli\prompt;
 
 const ROUNDS_COUNT = 3;
 
-function runEngine($generateGameData, $gameRule)
+function run($task, $getResult)
 {
-    line("Welcome to the Brain Games!");
-    line($gameRule);
-    $userName = prompt('May I have your name', $default = false, "? ");
-    line("Hello, %s!", $userName);
+    line("Welcome to the Brain Game");
+    line($task);
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
+    // play 3 rounds
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        ['question' => $question, 'correctAnswer' => $correctAnswer] = $generateGameData();
-        line("Question: {$question}");
-        $userAnswer = prompt("Your answer");
-        if ($userAnswer == $correctAnswer) {
-             line("Correct!");
+        [$question, $rightAnswer] = $getResult();
+        line("Question: %s", $question);
+        $answer = prompt("Your answer");
+        if ($rightAnswer == $answer) {
+            line("Correct!");
         } else {
-            line("{$userAnswer} is wrong answer ;(.");
-            line("Correct answer was {$correctAnswer}. Let's try again, {$userName}!");
-            die();
+            line("'%s' is wrong answer ;(. Correct asnwer was '%s'.", $answer, $rightAnswer);
+            line("Let's try again, %s!", $name);
+            // exit if wrong answer
+            return;
         }
     }
-    line("Congratulations, %s!", $userName);
+    line("Congratulations, %s!", $name);
 }

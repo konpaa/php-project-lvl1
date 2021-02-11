@@ -1,55 +1,34 @@
 <?php
 
 namespace Php\Project\Lvl1\Games\progression;
+use function Php\Project\Lvl1\general\run;
 
-use function Php\Project\Lvl1\general\runEngine;
+const TASK = 'What number is missing in the progression?';
+const PROGRESSION_LENGTH = 10;
 
-const GAME_RULE_PROGRESSION = "What number is missing in the progression?";
-const COUNT_PROGRESSION = 10;
-
-function generateRandomProgression($count, $startPoint, $progressionStep)
+function progression($init, $step)
 {
-    $result = [];
-
-    for ($i = 0, $step = $startPoint; $i < $count; $i++) {
-        if ($i == 0) {
-            $result[] = $step;
-        } else {
-            $step += $progressionStep;
-            $result[] = $step;
-        }
+    $progression = [];
+    for ($i = 0; $i < PROGRESSION_LENGTH; $i++) {
+        // initial element
+        $progression[] = $init;
+        // next element
+        $init += $step;
     }
-    return $result;
+    return $progression;
 }
 
-function generateRandomHideValue($progression, $hiddenElementIndex)
+function play()
 {
-    $result = [];
-    $progressionWithHideValue = [];
-
-    foreach ($progression as $key => $value) {
-        if ($key == $hiddenElementIndex) {
-            $progressionWithHideValue[] = "..";
-        } else {
-            $progressionWithHideValue[] = $value;
-        }
-    }
-
-    $result['question'] = implode(" ", $progressionWithHideValue);
-    $result['correctAnswer'] = (string) $progression[$hiddenElementIndex];
-
-    return $result;
-}
-
-function runProgressionGame()
-{
-    $generateGameData = function () {
-        $startPoint = rand(1, 10);
-        $progressionStep = rand(2, 5);
-        $progression = generateRandomProgression(COUNT_PROGRESSION, $startPoint, $progressionStep);
-        $hiddenElementIndex = rand(0, COUNT_PROGRESSION - 1);
-        return generateRandomHideValue($progression, $hiddenElementIndex);
+    $getResult = function () {
+        $init = rand(1, 10);
+        $step = rand(1, 10);
+        $result = progression($init, $step);
+        $idxToFind = array_rand($result);
+        $question = $result;
+        $question[$idxToFind] = "..";
+        $question = implode(' ', $question);
+        return [$question, $result[$idxToFind]];
     };
-
-    runEngine($generateGameData, GAME_RULE_PROGRESSION);
+    run(TASK, $getResult);
 }

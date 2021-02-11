@@ -1,50 +1,37 @@
 <?php
 
 namespace Php\Project\Lvl1\Games\calc;
+use function Php\Project\Lvl1\general\run;
 
-use function Php\Project\Lvl1\general\runEngine;
+const TASK = "What is the result of the expression?";
 
-const GAME_RULE_CALCULATOR = "What is the result of the expression?";
-const MATH_SIGNS = ['+', '-', '*'];
-
-function generateRandomSign($mathSigns)
+function calculate($operand1, $operand2, $operator)
 {
-    return $mathSigns[array_rand($mathSigns)];
-}
+    switch ($operator) {
+        case '+':
+            return $operand1 + $operand2;
+            break;
 
-/**
- * Count expression
- *
- *@param array $expression
- *
- * @return int
- * @author Denis
- */
-function calculateExpression($firstValue, $secondValue, $mathSign)
-{
-    switch ($mathSign) {
-        case "+":
-            return $firstValue + $secondValue;
-        case "-":
-            return $firstValue - $secondValue;
-        case "*":
-            return $firstValue * $secondValue;
+        case '-':
+            return $operand1 - $operand2;
+            break;
+
+        case '*':
+            return $operand1 * $operand2;
+            break;
     }
 }
 
-function runCalcGame()
+function play()
 {
-    $generateGameData = function () {
-        $firstValue = rand(1, 50);
-        $secondValue = rand(1, 50);
-        $mathSign = generateRandomSign(MATH_SIGNS);
-        $gameData = [];
-
-        $correctAnswer = calculateExpression($firstValue, $secondValue, $mathSign);
-        $gameData['question'] = "{$firstValue} {$mathSign} {$secondValue}";
-        $gameData['correctAnswer'] = (string) $correctAnswer;
-        return $gameData;
+    $getResult = function () {
+        $operand1 = rand(1, 100);
+        $operand2 = rand(1, 100);
+        $operators = ['+', '-', '*'];
+        $operator = $operators[array_rand($operators, 1)];
+        $result = calculate($operand1, $operand2, $operator);
+        $question = "$operand1 $operator $operand2";
+        return [$question, $result];
     };
-
-    runEngine($generateGameData, GAME_RULE_CALCULATOR);
+    run(TASK, $getResult);
 }

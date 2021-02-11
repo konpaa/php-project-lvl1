@@ -1,24 +1,21 @@
 <?php
 
 namespace Php\Project\Lvl1\Games\even;
+use function Php\Project\Lvl1\general\run;
 
-use function Php\Project\Lvl1\general\runEngine;
-
-const GAME_RULE_EVEN = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+const TASK = 'Answer "yes" if number even otherwise answer "no".';
 
 function isEven($number)
 {
-    return $number % 2 == 0;
+    return $number % 2 === 0;
 }
 
-function runEvenGame()
+function play()
 {
-    $generateGameData = function () {
-        $gameData = [];
+    $getResult = function () {
         $question = rand(1, 100);
-        $gameData['question'] = $question;
-        $gameData['correctAnswer'] = isEven($question) ? 'yes' : 'no';
-        return $gameData;
+        $rightAnswer = isEven($question) ? 'yes' : 'no';
+        return [$question, $rightAnswer];
     };
-    runEngine($generateGameData, GAME_RULE_EVEN);
+    run(TASK, $getResult);
 }

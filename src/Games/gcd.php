@@ -1,34 +1,30 @@
 <?php
 
 namespace Php\Project\Lvl1\Games\gcd;
-
-use function Php\Project\Lvl1\general\runEngine;
+use function Php\Project\Lvl1\general\run;
 
 const GAME_RULE_GCD = "Find the greatest common divisor of given numbers.";
 
-function findGcd($firstValue, $secondValue)
+const TASK = 'Find the greatest common divisor of given numbers.';
+
+function gcd($a, $b)
 {
-    while ($firstValue != $secondValue) {
-        if ($firstValue > $secondValue) {
-            $firstValue -= $secondValue;
-        } else {
-            $secondValue -= $firstValue;
-        }
+    while ($b != 0) {
+        $temp = $a % $b;
+        $a = $b;
+        $b = $temp;
     }
-    return $firstValue;
+    return $a;
 }
 
-function runGcdGame()
+function play()
 {
-    $generateGameData = function () {
-        $gameData = [];
-        $firstValue = rand(1, 50);
-        $secondValue = rand(1, 50);
-        $correctGcd = findGcd($firstValue, $secondValue);
-        $gameData['question'] = "$firstValue $secondValue";
-        $gameData['correctAnswer'] = (string) $correctGcd;
-        return $gameData;
+    $getResult = function () {
+        $a = rand(1, 100);
+        $b = rand(1, 100);
+        $result = gcd($a, $b);
+        $question = "$a $b";
+        return [$question, $result];
     };
-
-    runEngine($generateGameData, GAME_RULE_GCD);
+    run(TASK, $getResult);
 }

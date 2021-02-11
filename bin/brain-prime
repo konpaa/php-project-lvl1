@@ -1,12 +1,15 @@
 #!/usr/bin/env php
 <?php
+namespace Php\Project\Lvl1\Games\prime;
 
-$autoloadPath1 = __DIR__ . '/../../../autoload.php';
-$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+$autoloadPath1 = __DIR__ . '/../vendor/autoload.php';
+$autoloadPath2 = __DIR__ . '/../../../autoload.php';
+
 if (file_exists($autoloadPath1)) {
     require_once $autoloadPath1;
 } else {
     require_once $autoloadPath2;
 }
 
-Php\Project\Lvl1\games\prime\runPrimeGame();
+play();
+?>

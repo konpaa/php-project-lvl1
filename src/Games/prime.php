@@ -1,33 +1,31 @@
 <?php
 
 namespace Php\Project\Lvl1\Games\prime;
+use function Php\Project\Lvl1\general\run;
 
-use function Php\Project\Lvl1\general\runEngine;
-
-const GAME_RULE_PRIME = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function isPrime($number)
 {
-    if (!is_int($number) || $number < 2) {
+    // false for negatives, 0 and 1
+    if ($number < 2) {
         return false;
     }
-    for ($x = 2; $x <= sqrt($number); $x++) {
-        if ($number % $x == 0) {
+    for ($i = 2; $i <= $number / 2; $i++) {
+        if ($number % $i === 0) {
             return false;
         }
     }
     return true;
 }
 
-function runPrimeGame()
+function play()
 {
-    $generateGameData = function () {
-        $gameData = [];
-        $question = rand(2, 100);
-        $gameData['question'] = $question;
-        $gameData['correctAnswer'] = isPrime($question) ? 'yes' : 'no';
-        return $gameData;
+    $getResult = function () {
+        $num = rand(1, 100);
+        $result = isPrime($num) ? "yes" : "no";
+        $question = $num;
+        return [$question, $result];
     };
-
-    runEngine($generateGameData, GAME_RULE_PRIME);
+    run(TASK, $getResult);
 }
