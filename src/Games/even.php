@@ -6,7 +6,7 @@ use function Php\Project\Lvl1\general\run;
 
 const TASK = 'Answer "yes" if number even otherwise answer "no".';
 
-function isEven(int $number) : bool
+function isEven(int $number): bool
 {
     return $number % 2 === 0;
 }

@@ -8,7 +8,7 @@ const GAME_RULE_GCD = "Find the greatest common divisor of given numbers.";
 
 const TASK = 'Find the greatest common divisor of given numbers.';
 
-function gcd(int $a, int $b) : int
+function gcd(int $a, int $b): int
 {
     while ($b != 0) {
         $temp = $a % $b;
