@@ -20,7 +20,7 @@ function calculate(int $operand1, int $operand2, string $operator): int
         default:
             var_dump($operator);
     }
-    return true;
+    return $operand1;
 }
 
 function play(): void
