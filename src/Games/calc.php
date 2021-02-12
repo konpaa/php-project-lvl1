@@ -17,7 +17,10 @@ function calculate(int $operand1, int $operand2, string $operator): int
 
         case '*':
             return $operand1 * $operand2;
+        default:
+            var_dump($operator);
     }
+    return true;
 }
 
 function play(): void
